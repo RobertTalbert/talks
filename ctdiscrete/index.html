@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Computational Thinking in Discrete Mathematics</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background="splash2.svg">
+				</section>
+
+				<section data-background="ctdiscretewebpage.svg">
+					<!-- <h2>Companion website:</h2> -->
+					<!-- <p><a href="http://bit.ly/2ibojMe"><font size="7">http://bit.ly/ctdiscrete</font></a></p> -->
+				</section>
+
+				<section>
+					<!-- <section data-background="math.jpg">
+						<h1><font color="lime">How does (discrete) mathematics work?</font></h1>
+					</section>
+					<section data-background="braincomputer1.jpg">
+						<h1><font color="yellow">Discrete math is computational</font></h1>
+					</section> -->
+					<section>
+						<h3>How many subsets does an $n$-element set have?</h3>
+						<p class="fragment">(<b><font color="lime">Decomposition</font></b>) $\emptyset \rightarrow \emptyset$; $\{x_0\} \rightarrow \emptyset, \{x_0\}$; $\{x_0, x_1\} \rightarrow \emptyset, \{x_0\}, \{x_1\}, \{x_0, x_1\}$, ...</p>
+						<p class="fragment">(<b><font color="lime">Pattern</font></b>) It's $2^n$!
+						<p class="fragment">(<font color="lime">Abstraction</font>) For all $n \in \mathbb{N}$, a set with $n$ elements has $2^n$ subsets. </p>
+						<h3 class="fragment"><font color="lime">WHY?</font></h3>
+					</section>
+					<section>
+						(<font color="lime">Solution/Algorithm</font>) The empty set has 1 subset. If a $k$-element set has $2^k$ subsets for some $k$, then a $(k+1)$-element set has $2^k$ subsets with $x_{k+1}$ and $2^k$ subsets without $x_{k+1}$. Hence there are $2^{k+1}$ subsets with $k+1$ elements.
+<!-- 						<p class="fragment">Set up a bijection between elements of the set and $n$-bit strings, $x_i =1$ if $x_i$ is included in a subset and $x_i = 0$ otherwise.</p> -->
+					</section>
+				</section>
+
+				<section>
+				<section data-background="#FFFFFF"><h2><font color="#0065A4">Computational thinking</font></h2>
+				<h4 class="fragment"><font color="000000">Decomposition</font></h4>
+				<h4 class="fragment"><font color="000000">Pattern finding</font></h4>
+				<h4 class="fragment"><font color="000000">Abstraction</font></h4>
+				<h4 class="fragment"><font color="000000">Algorithm design</font> </h4>
+				<h4 class="fragment"><font color="blue">Algorithm $\leftrightarrow$ solution $\leftrightarrow$ explanation $\leftrightarrow$ proof</font></h4>
+				<h4 class="fragment"><font color="green">Explain why / Show how</font></h4>
+				</section>
+				<!-- <section>
+					<img src="wing.png">
+					<p>Communications of the ACM, Vol. 49(3):33–35, <a href="http://dx.doi.org/10.1145/1118178.1118215">http://dx.doi.org/10.1145/1118178.1118215</a></p>
+				</section> -->
+				<section>
+					<a href="http://www.azquotes.com/quote/790453" title="Seymour Papert quote"><img src="http://www.azquotes.com/picture-quotes/quote-what-the-gears-cannot-do-the-computer-might-the-computer-is-the-proteus-of-machines-seymour-papert-79-4-0453.jpg" alt="What the gears cannot do the computer might. The computer is the Proteus of machines. Its essence is its universality, its power to simulate. - Seymour Papert"></a>
+				</section>
+				<!-- <section>
+					<h2>ENGINEERING :: GEARS</h2>
+					<h2>BIOLOGY :: MICROSCOPE</h2>
+					<h2>ASTRONOMY :: TELESCOPE</h2>
+					<h2>MATHEMATICS :: COMPUTER</h2>
+				</section> -->
+
+				</section>
+
+				<section data-background="#FFFFFF">
+					<h2 style="text-align: left">Python</h2>
+					<p style="text-align: left"><a href="http://python.org">http://python.org</a></p>
+					<img src="python.png">
+				</section>				<section data-background="#FFFFFF">
+					<h2 style="text-align: left">Jupyter</h2>
+					<p style="text-align: left"><a href="http://jupyter.org">http://jupyter.org</a></p>
+					<img src="jupyterpreview.png">
+				</section>
+				<section>
+					<img src="Jupyter-demo.gif">
+				</section>
+
+				<section>
+				<section data-background="#0065A4">
+				<h2><font color="FFFFFF">Using Python and Jupyter in discrete mathematics</font></h2>
+				<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+				</section>
+				<section>
+					Example: Linear recurrence relation solver
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+					<iframe src="rrsolver.html" width="1200" height="500"></iframe>
+				</section>
+				<section>
+					Exemplary student solution
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+					<iframe src="rrsolver-solution.html" width="1200" height="500"></iframe>
+				</section>
+				<section>
+					Diameters of complete bipartite graphs
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+					<img src="diameter-frame.png" alt="Pair programming activity">
+				</section>
+				<section>
+					<img src="diameter-demo.gif" alt="Diameter demo">
+				</section>
+
+
+				<!-- <section>
+					Example: Relationships between edges and nodes
+					<img src="nodesedges.gif" width="800" height="500">
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+				</section>
+				<section>
+					<img src="edgesdegrees.gif" width="720" height="600">
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+				</section> -->
+				<section>
+					<h2>Other uses</h2>
+					<p><a href="http://bit.ly/ctdiscrete">http://bit.ly/ctdiscrete</a></p>
+					<h4>Writing code to implement set operations</h4>
+					<h4>Testing relations for properties</h4>
+					<h4>Reverse-engineering the networkX diameter and clustering coefficient methods</h4>
+
+				</section>
+				</section>
+				<section data-background="#0065A4">
+				<h1><font color="#000000">Thank you</font></h1>
+				<p><a href="http://bit.ly/2ibojMe"><font size="7" color="#000000">http://bit.ly/ctdiscrete</font></a></p>
+				<p><a href="mailto:talbertr@gvsu.edu"><font size="7" color="#000000">talbertr@gvsu.edu</font></a></p>
+				<p><a href="https://rtalbert.org"><font size="7" color="#000000">rtalbert.org</font></a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
